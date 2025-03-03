@@ -1,0 +1,80 @@
+.diff {
+    margin-top: 250px;
+}
+
+.diff__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.diff__item {
+    max-width: 350px;
+    padding-top: 100px;
+    position: relative;
+    margin-right: 20px;
+
+    &::before {
+        position: absolute;
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+        background-color: rgba(150, 169, 198, 1);
+        content: '';
+        left: 0;
+        top: 0;
+        background-image: url('../../img/thunder.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 0;
+    }
+
+    &:nth-child(2) {
+        &::before {
+            background-image: url('../../img/dollar.svg');
+        }   
+    }
+
+    &:last-child{
+        margin-right: 0;
+        &::before{
+            background-image: url('../../img/person.svg');
+        }
+    }
+}
+
+.diff__item-title {
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38.39px;
+    letter-spacing: -0.39px;
+}
+
+.diff__item-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    color: $gray;
+}
+
+@media only screen and (max-width:800px){
+    .diff__list{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .diff__item{
+        text-align: center;
+        margin: 0 auto;
+        &:last-child{
+            margin: 0 auto;
+        }
+        &::before{
+            left: calc(50% - 43px);
+        }
+    }
+
+
+}

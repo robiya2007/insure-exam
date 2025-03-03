@@ -1,0 +1,139 @@
+.intro {
+    background-color: $dark-blue;
+    position: relative;
+    &::after {
+        position: absolute;
+        background: url('/img/intro-after.png') no-repeat left bottom;
+        content: '';
+        width: 106px;
+        height: 354px;
+        background-size: cover;
+        bottom: -250px;
+    }
+
+    &::before {
+        position: absolute;
+        background: url('/img/intro-before.png') no-repeat right top;
+        content: '';
+        width: 440px;
+        height: 649px;
+        right: 0;
+    }
+}
+
+.intro__container {
+    display: flex;
+    padding-top: 80px;
+}
+
+.intro__content {
+    margin-top: 60px;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.intro__text {
+    line-height: 26px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.intro__link {
+    border: 1px solid white;
+    color: white;
+    z-index: 1;
+
+    &:hover {
+        color: rgba(44, 40, 48, 1);
+        background-color: white;
+    }
+}
+
+.intro__img {
+    margin-bottom: -100px;
+    margin-top: 50px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+@media only screen and (max-width:940px){
+    .intro__img{
+        width: 440px;
+        height: auto;
+    }
+}
+@media only screen and (max-width:840px){
+    .intro__img{
+        width: 340px;
+        height: auto;
+    }
+    .intro__content{
+        padding: 50px;
+    }
+
+}
+
+@media only screen and (max-width:800px){
+    .intro__container{
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    .intro__img{
+        width: 100%;
+        margin: 0;
+        z-index: 1;
+    }
+    .intro__content{
+        width: 80%;
+        text-align: center;
+        margin: 10px auto;
+        padding: 0;
+        padding-bottom: 50px;
+    }
+    .intro{
+        &::before{
+            background: url('../../img/intro-before-mobile.png') no-repeat right bottom;
+            top: 90%;
+            width: 130px;
+            height: 360px;
+        }
+        &::after{
+            background: url('../../img/intro-after-mobile.png') no-repeat left top;
+            background-size: cover;
+            top: 55%;
+        }
+    }
+}
+@media only screen and (max-width:630px){
+    .intro{
+        &::after{
+            top: 50%;
+        }
+        &::before{
+            top: 85%;
+        }
+    }
+}
+@media only screen and (max-width:540px){
+    .intro{
+        &::after{
+            top: 40%;
+        }
+        
+    }
+}
+@media only screen and (max-width:500px){
+    .intro{
+        &::after{
+            top: 30%;
+        }
+        
+    }
+}
+@media only screen and (max-width:370px){
+    .intro{
+        &::after{
+            top: 20%;
+        }
+        
+    }
+}

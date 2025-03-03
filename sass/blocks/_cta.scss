@@ -1,0 +1,54 @@
+.cta {
+    color: white;
+    margin-top: 100px;
+}
+
+.cta__container {
+    padding: 60px 80px;
+    background-color: $dark-blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &::after{
+        position: absolute;
+        width: 450px;
+        height: 232px;
+        content: '';
+        background: url('../../img/cta-after.png') no-repeat center center;
+        background-size: cover;
+        right: 0;
+    }
+}
+
+.cta__title {
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.78px;
+    max-width: 475px;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width:800px){
+    .cta__container{
+        padding: 50px 30px;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .cta__container{
+        flex-direction: column;
+        &::after{
+            top: 0;
+        }
+    }
+    .cta__title{
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 46px;
+        line-height: 46px;
+    }
+}
